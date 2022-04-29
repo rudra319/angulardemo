@@ -1,0 +1,50 @@
+<a routerLink="home">Home</a><br/>
+<a routerLink="">About Us</a><br/>
+<a routerLink="contact-us">Contact Us</a><br/>
+<router-outlet></router-outlet>
+
+<h1 [style.color]="'yellow'">Footer</h1>
+<!-- <br/><br/><br/><br/>
+<h1>Two Way Data Binding</h1>
+<input type="text" [(ngModel)]="cityName" />
+<br/><br/>
+City Name is : {{cityName}}
+<br/><br/>
+<h1>Normal Data Binding</h1>
+<input type="text" #username (keyup)="displayName(username.value)">
+<br/><br/>
+{{name}}
+<br/><br/><br/>
+
+
+
+<ul *ngFor="let name of names">
+    <li>{{name.firstname}}</li>
+    <li>{{name.address}}</li>
+</ul>
+
+<ng-container [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'" [style.color]="'red'">Welcome to {{title}}</h1>
+    <h1 *ngSwitchCase="'green'" [style.color]="'green'">Welcome to {{title}}</h1>
+    <h1 *ngSwitchCase="'blue'" [style.color]="'blue'">Welcome to {{title}}</h1>
+    <h1 *ngSwitchDefault>Welcome to {{title}}</h1>
+</ng-container>
+<h1 [style.color]="showRed ?'red': 'yellow' ">
+    {{showRed ? 'welcome in red': 'welcome in yellow'}}
+</h1>
+<button type="button" (click)="toggleWithButton()">Toggle</button>
+<p *ngIf="display">Welcome to angular class</p>
+
+<h1 *ngIf="showRed; else otherColor" [style.color]="'red'">Welcome in red</h1>
+<ng-template #otherColor>
+    <div *ngIf="showGreen; else yellowColor" [style.color]="'green'">Welcome in green</div> 
+</ng-template>
+<ng-template #yellowColor>
+    <h1 [style.color]="'yellow'">Welcome in yellow</h1> 
+</ng-template>
+<app-user-auth></app-user-auth>
+<app-sign-in></app-sign-in>
+<button (click)="showMyName('Santosh', 'BBSR')">Click Me</button>
+<button (click)="showMyName(inputname.value, 'CTC', 12346, 12)">Click Me again</button>
+<br/><br/>
+<input type="text" #inputname placeholder="Enter your name"> -->
