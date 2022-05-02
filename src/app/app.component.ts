@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name:string;
+  name:any;
   cityName:any;
   title = 'csm';
   // colorRed = 'red';
@@ -28,7 +28,7 @@ export class AppComponent {
   toggleWithButton(){
     this.display= !this.display;
   }
-  showMyName(name:string, address:string, ...monalisha){
+  showMyName(name:string, address:string, ...monalisha:any){
     const [x, y] = monalisha;
     console.log(x, y);
     console.log(name, address);
@@ -36,7 +36,7 @@ export class AppComponent {
     const names = ["Ajit", "Anirudha"];
     console.log(["Subhra", "Santosh", ...names]);
   }
-  displayName(value){
+  displayName(value:any){
     this.name = value;
   }
 }

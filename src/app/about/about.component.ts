@@ -10,7 +10,18 @@ export class AboutComponent implements OnInit {
   constructor(private router: Router, private routeActivate: ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log(this.router, this.routeActivate);
+    const stateParams = history.state;
+    console.log(stateParams.user, stateParams.name);
+
+
+
+
+    //console.log(this.router, this.routeActivate);
+    //console.log(this.routeActivate.snapshot.url);
+    //const [{path, parameters}] = this.routeActivate.snapshot.url;
+    //const {user,name}= this.routeActivate.snapshot.params;
+    //console.log(path, parameters['user']);
+    //console.log(routeIndex, this.routeActivate.snapshot.params);
   }
 
 }

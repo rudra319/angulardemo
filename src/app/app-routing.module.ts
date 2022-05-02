@@ -9,10 +9,10 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 const routes: Routes = [
-  {path: 'home', 'component': HomeComponent},
+  {path: '', 'component': HomeComponent},
   {path: 'contact-us', 'component': ContactUsComponent},
   {
-    path: '', 
+    path: 'about', 
     component: AboutComponent,
     children: [
       {path: 'company', component: CompanyComponent},
@@ -20,7 +20,8 @@ const routes: Routes = [
     ]
   },
   {path:'forgot-pwd', component: ForgotPasswordComponent},
-  {path:'user/:id/:uid', component: UserComponent}
+  {path:'user/:id/:uid', component: UserComponent},
+  {path: 'admin', loadChildren:() => import('./admin/admin.module').then(m => m.AdminModule)}
 ];
 
 @NgModule({
