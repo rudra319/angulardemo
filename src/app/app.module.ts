@@ -12,6 +12,8 @@ import { CompanyComponent } from './about/company/company.component';
 import { EmployeeComponent } from './about/employee/employee.component';
 import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { Usd2InrPipe } from './pipes/usd2-inr.pipe';
+import { ChangeColorDirective } from './directives/change-color.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     CompanyComponent,
     EmployeeComponent,
     HomeComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    Usd2InrPipe,
+    ChangeColorDirective
   ],
   imports: [
     BrowserModule,

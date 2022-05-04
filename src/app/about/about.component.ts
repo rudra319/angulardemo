@@ -6,7 +6,11 @@ import { Router, ActivatedRoute} from '@angular/router';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
+  jsonData:any = [
+    {name: 'Abc', address:'BBSR'},
+    {name: 'Def', address: 'ctc'}
+  ];
+  price:number = 20;
   constructor(private router: Router, private routeActivate: ActivatedRoute) { }
 
   ngOnInit(): void {
