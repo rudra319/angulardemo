@@ -1,0 +1,14 @@
+<form #registerForm="ngForm" (ngSubmit)="registerUser(registerForm.value)">
+    <input type="text" name="username" placeholder="Enter username" ngModel/>
+    <br/><br/>
+    <input type="text" name="mobile" placeholder="Enter mobile number" ngModel/>
+    <br/><br/>
+    <input type="password" name="pwd" placeholder="Enter Password" ngModel/>
+    <br/><br/>
+    <input type="radio" name="gender" value="male" ngModel>Male
+    <input type="radio" name="gender" value="female" ngModel>Female
+    <br/><br/>
+    <input type="checkbox" name="terms" ngModel /> Term & conditions
+    <br/><br/>
+    <button type="submit">Submit</button>
+</form>

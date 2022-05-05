@@ -1,0 +1,14 @@
+<form [formGroup]="registerForm" (ngSubmit)="submitForm()">
+    <input type="text" placeholder="Enter username" formControlName="username"/>
+    <br/><br/>
+    <input type="text" name="mobile" placeholder="Enter mobile number" formControlName="mobile"/>
+    <br/><br/>
+    <input type="password" name="pwd" placeholder="Enter Password" formControlName="pwd"/>
+    <br/><br/>
+    <input type="radio" name="gender" value="male" formControlName="gender">Male
+    <input type="radio" name="gender" value="female" formControlName="gender">Female
+    <br/><br/>
+    <input type="checkbox" name="terms" formControlName="terms" /> Term & conditions
+    <br/><br/>
+    <button type="submit" [disabled]="registerForm.invalid">Submit</button>
+</form>

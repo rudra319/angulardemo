@@ -14,7 +14,9 @@ import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { Usd2InrPipe } from './pipes/usd2-inr.pipe';
 import { ChangeColorDirective } from './directives/change-color.directive';
-
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,13 +29,16 @@ import { ChangeColorDirective } from './directives/change-color.directive';
     HomeComponent,
     ContactUsComponent,
     Usd2InrPipe,
-    ChangeColorDirective
+    ChangeColorDirective,
+    TemplateDrivenFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     UserAuthModule,
-    FormsModule 
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
