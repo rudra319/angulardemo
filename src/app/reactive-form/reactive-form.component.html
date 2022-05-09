@@ -1,14 +1,25 @@
 <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
-    <input type="text" placeholder="Enter username" formControlName="username"/>
-    <br/><br/>
+    <input type="text" (change)="setValidation()" placeholder="Enter username" formControlName="username"/>
+    <br/>
+    <span *ngIf="controls['username'].touched && controls['username'].invalid" >
+        This field is required
+    </span>
+    <br/>
     <input type="text" name="mobile" placeholder="Enter mobile number" formControlName="mobile"/>
-    <br/><br/>
+    <br/>
+    <span *ngIf="controls['mobile'].touched && controls['mobile'].invalid" >
+        <span *ngIf="controls['mobile'].errors && controls['mobile'].errors['required']">This field is required</span>
+        <span *ngIf="controls['mobile'].errors && controls['mobile'].errors['minlength']">Minimum length should be 10</span>
+    </span>
+    <br/>
     <input type="password" name="pwd" placeholder="Enter Password" formControlName="pwd"/>
-    <br/><br/>
+    <br/>
+    <span *ngIf="(controls?.['pwd']?.errors?.['abc'])">This is a custom error</span>
+    <br/>
     <input type="radio" name="gender" value="male" formControlName="gender">Male
     <input type="radio" name="gender" value="female" formControlName="gender">Female
     <br/><br/>
     <input type="checkbox" name="terms" formControlName="terms" /> Term & conditions
     <br/><br/>
-    <button type="submit" [disabled]="registerForm.invalid">Submit</button>
+    <button type="submit">Submit</button>
 </form>

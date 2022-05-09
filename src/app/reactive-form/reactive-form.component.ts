@@ -13,7 +13,7 @@ export class ReactiveFormComponent implements OnInit {
   gender = '';
   ngOnInit(): void {
     this.registerForm = this.fb.group({
-      'username': [null, [Validators.required]],
+      'username': [null, [Validators.required, Validators.pattern]],
       'mobile': [null, [Validators.required, Validators.minLength(10), Validators.maxLength(12)]],
       'pwd': [null],
       'gender': [this.isTrue ? 'male': 'female'],
@@ -22,6 +22,16 @@ export class ReactiveFormComponent implements OnInit {
   }
   submitForm(){
     console.log(this.registerForm.controls['mobile'].errors);
+  }
+  get controls(){
+    return this.registerForm.controls;
+  }
+  setValidation(){
+    if(this.controls['username'].valid){
+      this.controls['pwd'].setValidators(Validators.required);
+      this.controls['pwd'].setErrors({abc: true});
+      //this.controls['pwd'].patchValue('asd');
+    }
   }
 
 }

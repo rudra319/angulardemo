@@ -12,6 +12,9 @@ export class TemplateDrivenFormComponent implements OnInit {
   ngOnInit(): void {
   }
   registerUser(formValue:any){
-    console.log(formValue.username);
+    console.log(formValue);
+  }
+  uploadImage(e:any){
+    console.log(e.target.files);
   }
 }
